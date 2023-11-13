@@ -208,6 +208,22 @@ export function aufgabe11(args) {
   return null
 }
 
+export function aufgabe14(args) {
+  const input = args
+  let countE = 0
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === 'e') {
+      countE++
+      if (countE === 3) {
+        return i
+      }
+    }
+  }
+  return -1
+}
+
 export function aufgabe12(args) {
   const input = args
 
@@ -215,21 +231,12 @@ export function aufgabe12(args) {
     const currentElement = input[i]
     if (currentElement === 'e')
        return i
+       
   }
   return -1
 }
 
 export function aufgabe13(args) {
-  const input = args
-  const result = []
-  for (let i = 0; i < input.length; i++) {
-    const currentElement = input[i]
-
-  }
-  return result.join("")
-}
-
-export function aufgabe14(args) {
   const input = args
   const result = []
   for (let i = 0; i < input.length; i++) {
