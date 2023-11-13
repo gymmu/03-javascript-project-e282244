@@ -226,6 +226,8 @@ export function aufgabe14(args) {
 
 export function aufgabe12(args) {
   const input = args
+  const result = []
+  
 
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
@@ -239,11 +241,21 @@ export function aufgabe12(args) {
 export function aufgabe13(args) {
   const input = args
   const result = []
+
+  let positionOfLastE= -1
+
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
-
+    
+    if (currentElement === 'e') {
+      positionOfLastE= i
+    }  
+    
+      
   }
+  return positionOfLastE
 }
+
 
 export function aufgabe15(args) {
   const input = args
