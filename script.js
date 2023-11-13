@@ -130,15 +130,7 @@ export function aufgabe07(args) {
 }
 
 
-export function aufgabe09(args) {
-  const input = args
-  const result = []
-  for (let i = 0; i < input.length; i++) {
-    const currentElement = input[i]
-  
 
-  }
-}
 
 
 
@@ -168,6 +160,26 @@ export function aufgabe08(args) {
 
 }
 
+export function aufgabe09(args) {
+  const input = args
+  const result = []
+  let len = 0
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    //testet ob ein Eingabe genau 6 Zeichen beinhaltet.
+    len = len + 1
+  
+
+  }
+  if (len === 6) {
+    return true }
+    else {return false}
+
+  }
+
+
+
+
 
 export function aufgabe10(args) {
   const input = args
@@ -181,22 +193,30 @@ export function aufgabe10(args) {
 
 export function aufgabe11(args) {
   const input = args
-  const result = []
+  //gibt den asciiwert an oder einzelne buschstaben
+  let ascii = null
+
+  if (input.length > 1 ) { //funktionswächter
+    return null
+  }
+  
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
-
+    ascii = currentElement.charCodeAt (0)
+    return ascii
   }
-  return result.join("")
+  return null
 }
 
 export function aufgabe12(args) {
   const input = args
-  const result = []
+
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
-
+    if (currentElement === 'e')
+       return i
   }
-  return result.join("")
+  return -1
 }
 
 export function aufgabe13(args) {
