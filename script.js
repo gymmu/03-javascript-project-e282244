@@ -115,9 +115,18 @@ export function aufgabe06(args) {
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
 
+    if (currentElement === '.') {
+    return result.join("")
+    }
+
   }
+
+
   return result.join("")
 }
+
+
+
 
 export function aufgabe07(args) {
   const input = args
