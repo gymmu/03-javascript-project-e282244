@@ -263,6 +263,15 @@ export function aufgabe15(args) {
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
 
+   if (currentElement === ' ' ){
+    return result.join("")
+    }
+
+   if (currentElement ==='_'){
+    return result.join("")
+   }
+  
+    
   }
   return result.join("")
 }
