@@ -115,8 +115,12 @@ export function aufgabe06(args) {
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
 
-    if (currentElement === '.') {
-    return result.join("")
+    const asciiCode = currentElement.charCodeAt (0)
+    if (
+        (asciiCode <= 31 || asciiCode >= 33 && asciiCode <= 64
+          || asciiCode >= 91 && asciiCode <= 96 || asciiCode >= 123)
+    ) {
+      return true
     }
 
   }
@@ -339,11 +343,12 @@ export function aufgabe18(args) {
 }
 
 export function aufgabe19(args) {
-  const input = args
+  const input = args //Alle Zeichen sollen verdoppelt werden
   const result = []
   for (let i = 0; i < input.length; i++) {
-    const currentElement = input[i]
-
+    const currentElement = input [i]
+    result.push(currentElement)
+    result.push(currentElement)
   }
   return result.join("")
 }
@@ -357,6 +362,7 @@ export function aufgabe20(args) {
   }
   return result.join("")
 }
+
 
 export function aufgabe21(args) {
   const input = args
