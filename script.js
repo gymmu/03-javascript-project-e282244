@@ -89,21 +89,16 @@ export function aufgabe05(args) {
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
     //sollte ein Grossbuchstabe erkennen¨
-    if (currentElement===".") {}
-    else if (currentElement===" ") {}
-    //ist ein element gleich, so rechnet es + 1.
-    else if(currentElement === currentElement.toUpperCase() )
-    {capitalLetters++}
-
-   }
-   if (capitalLetters>0) {
-    return true
-    
-   }
-   else {
-    return false
-   }
+   
+    const ascii = currentElement.charCodeAt(0)
+    if (65 <= ascii && ascii <= 90) {
+      return true
+ 
+    }
+  }
+  return false
 }
+    
 
 
 
@@ -299,14 +294,11 @@ export function aufgabe15(args) {
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
 
-   if (currentElement === ' ' ){
+   if (currentElement === ' ' ) {
     return result.join("")
     }
 
-   if (currentElement ==='_'){
-    return result.join("")
-   }
-  
+   result.push(currentElement)
     
   }
   return result.join("")
