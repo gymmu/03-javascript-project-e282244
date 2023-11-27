@@ -426,12 +426,20 @@ export function aufgabe26(args) {
 
 export function aufgabe27(args) {
   const input = args
-  const result = []
-  for (let i = 0; i < input.length; i++) {
+  if (input.length === 0) return false
+ 
+
+  for (let i = 1; i < input.length; i++) {
     const currentElement = input[i]
+    const ascii = currentElement.charCodeAt (0)
+    if(48 <= ascii && ascii <= 57) {
+      // mache nichts; ist eine Zahl
+    } else {
+      return false
+    }
 
   }
-  return result.join("")
+  return true
 }
 
 export function aufgabe28(args) {
