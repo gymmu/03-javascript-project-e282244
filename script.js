@@ -345,15 +345,25 @@ export function aufgabe19(args) {
   return result.join("")
 }
 
-export function aufgabe20(args) {
+export function aufgabe20 (args) {
   const input = args
   const result = []
-  for (let i = 0; i < input.length; i++) {
+ 
+ 
+  for(let i =0; i < input.length; i++) {
     const currentElement = input[i]
-
-  }
-  return result.join("")
+ 
+    if (currentElement === ".") {
+      if (input[i+1] === " ")  {
+        return true
+      }
+ 
+    }
+  
 }
+  return false
+}
+
 
 
 export function aufgabe21(args) {
