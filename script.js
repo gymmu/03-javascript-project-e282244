@@ -42,7 +42,6 @@ return result.join("")
 
 
 
-
 export function aufgabe03(args) {
   const input = args
   const result = []
@@ -69,17 +68,22 @@ export function aufgabe04(args) {
   const input = args
   const result = []
   let count = 1
-
+ 
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
-    //sollte alle leerzeichen zählen
-    if (currentElement === ' '){
-      count = count + 1
-    }
+    //Soll mit alle Sonderzeichen umhalten
+if (currentElement === '.'){
+  count = count - 1
+}
+// Sollte Zahlen als Wörter zählen
+else if (currentElement === '.'){
+  count = count - 1
+}
   }
   return count
-
 }
+
+
 
 export function aufgabe05(args) {
   const input = args
@@ -88,7 +92,7 @@ export function aufgabe05(args) {
 
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
-    //sollte ein Grossbuchstabe erkennen¨
+    //sollte ein Grossbuchstabe erkennen
    
     const ascii = currentElement.charCodeAt(0)
     if (65 <= ascii && ascii <= 90) {
@@ -101,16 +105,14 @@ export function aufgabe05(args) {
     
 
 
-
-
-
 export function aufgabe06(args) {
   const input = args
   const result = []
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
-
     const asciiCode = currentElement.charCodeAt (0)
+
+    // Überprüfen, ob das aktuelle Element ein Sonderzeichen ist, mithilfe des asciicodes.
     if (
         (asciiCode <= 31 || asciiCode >= 33 && asciiCode <= 64
           || asciiCode >= 91 && asciiCode <= 96 || asciiCode >= 123)
@@ -162,7 +164,7 @@ export function aufgabe08(args) {
   const result = []
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
-
+ // Überprüft, ob das aktuelle Element ein 'e' ist und fügt ggf. '3' dem Ergebnis hinzu
     if (currentElement === 'e') {
       result.push("3")} 
       else { 
@@ -174,7 +176,7 @@ export function aufgabe08(args) {
 
  }
 
- return result.join("")
+ return result.join("") //gint das Ergebnis zurück als string
 
 
 
@@ -239,21 +241,6 @@ export function aufgabe11(args) {
   return null
 }
 
-export function aufgabe14(args) {
-  const input = args
-  let countE = 0
-
-  for (let i = 0; i < input.length; i++) {
-    const currentElement = input[i]
-    if (currentElement === 'e') {
-      countE++
-      if (countE === 3) {
-        return i
-      }
-    }
-  }
-  return -1
-}
 
 export function aufgabe12(args) {
   const input = args
@@ -288,6 +275,27 @@ export function aufgabe13(args) {
 }
 
 
+
+
+export function aufgabe14(args) {
+  const input = args
+  let countE = 0
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === 'e') {
+      countE++ // Erhöht den Zähler, wenn ein 'e'-Zeichen gefunden wird
+      if (countE === 3) {
+        return i
+      }
+    }
+  }
+  return -1
+}
+
+
+
+
 export function aufgabe15(args) {
   const input = args
   const result = []
@@ -304,6 +312,8 @@ export function aufgabe15(args) {
   return result.join("")
 }
 
+
+
 export function aufgabe16(args) {
   const input = args
   const result = []
@@ -313,6 +323,8 @@ export function aufgabe16(args) {
   }
   return result.join("")
 }
+
+
 
 export function aufgabe17(args) {
   const input = args;
