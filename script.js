@@ -284,7 +284,7 @@ export function aufgabe14(args) {
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
     if (currentElement === 'e') {
-      countE++ // Erhöht den Zähler, wenn ein 'e'-Zeichen gefunden wird
+      countE++ // Erhöht den Zähler, wenn ein 'e'Zeichen gefunden wird
       if (countE === 3) {
         return i
       }
@@ -317,11 +317,15 @@ export function aufgabe15(args) {
 export function aufgabe16(args) {
   const input = args
   const result = []
-  for (let i = 0; i < input.length; i++) {
-    const currentElement = input[i]
-
-  }
-  return result.join("")
+ 
+  for (let i= 0; i < input.length; i++) {
+    const currentElement = input [i];
+    if (currentElement === '$'){
+      break;
+    }
+    result.push(currentElement);
+}
+return result.join('')
 }
 
 
