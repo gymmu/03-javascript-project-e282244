@@ -174,7 +174,7 @@ export function aufgabe08(args) {
 
  }
 
- return result.join("") //gint das Ergebnis zurück als string
+ return result.join("") //gibt das Ergebnis zurück
 
 
 
@@ -196,7 +196,7 @@ export function aufgabe09(args) {
     else {return false}
 
   }
-
+u
 
 
 
@@ -204,16 +204,20 @@ export function aufgabe09(args) {
 export function aufgabe10(args) {
   const input = args
 
+
+  //überprüft, ob die Eingabe nicht genau 7 Zeichen lang ist, Ja= false
   if (input.length !== 7) return false
+
+  //überprüft ob das erste zeichen kein # ist, Ja= false
   if (input[0] !== "#")  return false 
 
   for (let i = 1; i < input.length; i++) {
     const currentElement = input[i]
     const ascii = currentElement.charCodeAt (0)
+     // mache nichts; ist eine Zahl
     if(48 <= ascii && ascii <= 57) {
-      // mache nichts; ist eine Zahl
+    // mache nichts; ist A-F
     }else if (65 <= ascii && ascii <= 70) {
-      // mache nichts; ist A-F
     } else {
       return false
     }
@@ -330,6 +334,8 @@ export function aufgabe17(args) {
  
   return result.join(',')
 }
+
+
 
 export function aufgabe18(args) {
   const input = args
