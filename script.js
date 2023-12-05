@@ -1,11 +1,12 @@
 export function aufgabe01(args) {
-  const input = args
-  const result = []
-
+  const input = args //Das was in der Eingabeleiste Steht wird gespeichert als "input"
+  const result = [] // man will die verarbeiteten Elemnte speichern
+  
+   // Durchlauft jedes Element in der Eingabeleiste
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
 
-    //Wenn das aktuelle Zeichen 'e' ist, hängt an  die Liste an
+       //Wenn das aktuelle Zeichen 'e' ist, hängt an  die Liste an
     if (currentElement === 'e') {
       result.push("")
       //Wenn das aktuelle Zeichen ein 'E' ist, hänge nichts an die Liste an
@@ -15,7 +16,7 @@ export function aufgabe01(args) {
       result.push(currentElement)
     }
   
-  }
+  } //Das Ergebnis wird wieder zurückgegeben
   return result.join("")
 
 }
@@ -35,7 +36,7 @@ export function aufgabe02(args) {
 
     //Hänge den Grossbuchstaben an das Resultat an...
     result.push(capitalizedElement)
-}
+}// Das Ergebnis wird wieder zurückgegeben
 return result.join("")
 
 }
@@ -72,9 +73,9 @@ export function aufgabe04(args) {
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
     //Soll mit alle Sonderzeichen umhalten
-if (currentElement === '.'){
+  if (currentElement === '.'){
   count = count - 1
-}
+  }
 // Sollte Zahlen als Wörter zählen
 else if (currentElement === '.'){
   count = count - 1
@@ -96,11 +97,11 @@ export function aufgabe05(args) {
    
     const ascii = currentElement.charCodeAt(0)
     if (65 <= ascii && ascii <= 90) {
-      return true
+      return true // Falls wahr wird sofort true zurückgegeben, die Funktion wird beendet
  
     }
   }
-  return false
+  return false // Falls es keine Grossbuchstben gibt, wird false zurückgegeben
 }
     
 
@@ -133,30 +134,27 @@ export function aufgabe07(args) {
   const input = args
   const result = []
   
+  // eine Schlaufe durchläuft alle Elemente im input
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
-    //sollte ein und erkennen
+    //sollte ein u und die nächsten Elemente n und danach d erkennen (Alle sind klein geschrieben)
     if (currentElement==="u") 
       if (input[i+1]=== "n")
       if (input[i+2]=== "d") {
         return true
     }
-     //sollte ein Und erkennen
+     //sollte ein U und die nächsten Elemente n und danach d erkennen (Das erste Elemnt muss unbedingt gross geschieben sein)
     if (currentElement==="U") 
       if (input[i+1]=== "n")
       if (input[i+2]=== "d") {
         return true
     }
 
-  }
+}
 
-  return false
+return false
 
-  }
-
-
-
-
+}
 
 
 export function aufgabe08(args) {
@@ -241,20 +239,6 @@ export function aufgabe11(args) {
   return null
 }
 
-
-export function aufgabe12(args) {
-  const input = args
-  const result = []
-  
-
-  for (let i = 0; i < input.length; i++) {
-    const currentElement = input[i]
-    if (currentElement === 'e')
-       return i
-       
-  }
-  return -1
-}
 
 export function aufgabe13(args) {
   const input = args
