@@ -43,6 +43,7 @@ return result.join("")
 
 
 
+
 export function aufgabe03(args) {
   const input = args
   const result = []
@@ -62,6 +63,7 @@ else if (currentElement === 'E'){
   }
   return count
 }
+
 
 
 
@@ -86,6 +88,7 @@ else if (currentElement === '.'){
 
 
 
+
 export function aufgabe05(args) {
   const input = args
   const result = []
@@ -104,6 +107,7 @@ export function aufgabe05(args) {
   return false // Falls es keine Grossbuchstben gibt, wird false zurückgegeben
 }
     
+
 
 
 export function aufgabe06(args) {
@@ -157,6 +161,8 @@ return false
 }
 
 
+
+
 export function aufgabe08(args) {
   const input = args
   const result = []
@@ -169,16 +175,13 @@ export function aufgabe08(args) {
       result.push(currentElement)
 
   }
-
- 
-
- }
-
+}
  return result.join("") //gibt das Ergebnis zurück
 
-
-
 }
+
+
+
 
 export function aufgabe09(args) {
   const input = args
@@ -196,7 +199,6 @@ export function aufgabe09(args) {
     else {return false}
 
   }
-u
 
 
 
@@ -226,6 +228,9 @@ export function aufgabe10(args) {
   return true
 }
 
+
+
+
 export function aufgabe11(args) {
   const input = args
   //gibt den asciiwert an oder einzelne buschstaben
@@ -242,6 +247,8 @@ export function aufgabe11(args) {
   }
   return null
 }
+
+
 
 
 export function aufgabe13(args) {
@@ -302,6 +309,7 @@ export function aufgabe15(args) {
 
 
 
+
 export function aufgabe16(args) {
   const input = args
   const result = []
@@ -315,6 +323,7 @@ export function aufgabe16(args) {
 }
 return result.join('')
 }
+
 
 
 
@@ -337,6 +346,7 @@ export function aufgabe17(args) {
 
 
 
+
 export function aufgabe18(args) {
   const input = args
   const result = []
@@ -346,6 +356,9 @@ export function aufgabe18(args) {
   }
   return result.join("")
 }
+
+
+
 
 export function aufgabe19(args) {
   const input = args //Alle Zeichen sollen verdoppelt werden
@@ -357,6 +370,9 @@ export function aufgabe19(args) {
   }
   return result.join("")
 }
+
+
+
 
 export function aufgabe20 (args) {
   const input = args
@@ -379,6 +395,7 @@ export function aufgabe20 (args) {
 
 
 
+
 export function aufgabe21(args) {
   const input = args
   const result = []
@@ -388,6 +405,9 @@ export function aufgabe21(args) {
   }
   return result.join("")
 }
+
+
+
 
 export function aufgabe22(args) {
   const input = args
@@ -399,6 +419,9 @@ export function aufgabe22(args) {
   return result.join("")
 }
 
+
+
+
 export function aufgabe23(args) {
   const input = args
   const result = []
@@ -408,6 +431,9 @@ export function aufgabe23(args) {
   }
   return result.join("")
 }
+
+
+
 
 export function aufgabe24(args) {
   const input = args
@@ -419,6 +445,9 @@ export function aufgabe24(args) {
   return result.join("")
 }
 
+
+
+
 export function aufgabe25(args) {
   const input = args
   const result = []
@@ -429,6 +458,9 @@ export function aufgabe25(args) {
   return result.join("")
 }
 
+
+
+
 export function aufgabe26(args) {
   const input = args
   const result = []
@@ -438,6 +470,9 @@ export function aufgabe26(args) {
   }
   return result.join("")
 }
+
+
+
 
 export function aufgabe27(args) {
   const input = args
@@ -457,6 +492,9 @@ export function aufgabe27(args) {
   return true
 }
 
+
+
+
 export function aufgabe28(args) {
   const input = args
   const result = []
@@ -465,5 +503,29 @@ export function aufgabe28(args) {
 
   }
   return result.join("")
+}
+
+
+
+export function bubbleSort(args) {
+  const text = args
+  const list = text.split("") // Mit deisem Code wandlet man den Text um, somit wird das Element vertauscht
+
+  for (let i = 0; i < list.length - 1; i++) {
+    const currentElement = list[i]
+    const nextElement = list[i + 1]
+    if (currentElement.charCodeAt(0) > nextElement.charCodeAt(0)) {
+      //Da die Reihenfolge nicht richtig ist, müssen Elemetne vertauscht werden.
+      const tmp = list[i + 1]
+      list[i + 1] = list[i]
+      list[i] = tmp
+      i = -1 //es fängt von vorne an
+    }
+  }
+  const result = list.join("")
+  console.log(result)
+
+  return result
+  
 }
 
