@@ -44,6 +44,7 @@ return result.join("")
 
 
 
+
 export function aufgabe03(args) {
   const input = args
   const result = []
@@ -134,6 +135,8 @@ export function aufgabe06(args) {
 
 
 
+
+
 export function aufgabe07(args) {
   const input = args
   const result = []
@@ -163,6 +166,7 @@ return false
 
 
 
+//ähnlich wie Aufgabe 1
 export function aufgabe08(args) {
   const input = args
   const result = []
@@ -230,7 +234,7 @@ export function aufgabe10(args) {
 
 
 
-
+//ähnlich wie aufgabe 3
 export function aufgabe11(args) {
   const input = args
   //gibt den asciiwert an oder einzelne buschstaben
@@ -253,16 +257,18 @@ export function aufgabe11(args) {
 
 export function aufgabe12(args) {
   const input = args
-  const result = []
+  const result = [] 
+
+  // eine schleife die jedes Element in der Eingabeleiste durchläuft
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
-
+    // überprüft, on das aktuelle Element dem Buchstaben e entspricht.
     if (currentElement === "e") {
       return i
     }
 
   }
-  return -1
+  return -1 // fals kein e gefunden ist, gibt es -1 zurück
 }
 
 
@@ -288,7 +294,7 @@ export function aufgabe13(args) {
 
 
 
-
+//ähnlich wie aufgabe 13
 export function aufgabe14(args) {
   const input = args
   let countE = 0
@@ -313,7 +319,7 @@ export function aufgabe15(args) {
   const result = []
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
-
+    //überprüft, ob aktuelles Element ein Leerzeichen ist
    if (currentElement === ' ' ) {
     return result.join("")
     }
@@ -333,12 +339,14 @@ export function aufgabe16(args) {
  
   for (let i= 0; i < input.length; i++) {
     const currentElement = input [i];
+
+    //überprüft, ob das aktuelle zeichen ein Dollarzeichen ist $
     if (currentElement === '$'){
-      break;
+      break; //beendet die schelife sofort, wenn es auch ein $ stösst
     }
     result.push(currentElement);
 }
-return result.join('')
+return result.join('') //gibt die die gesammelten Buchstaben zurück
 }
 
 
@@ -348,12 +356,12 @@ export function aufgabe17(args) {
   const input = args;
   const result = input.split(',')
  
-  
+  // Schleifen des Bubblesorts
   for (let i = 0; i < result.length - 1; i++) {
     for (let j = 0; j < result.length - 1 - i; j++) {
       if (result[j] > result[j + 1]) {
-        
-        [result[j], result[j + 1]] = [result[j + 1], result[j]]
+       //vergleicht aufeinanderdolfende Elemente in der Eingabeleiste und tauscht sie, fals die Reihenfolge nicht stimmt 
+        [result[j], result[j + 1]] = [result[j + 1], result[j]] //vertauscht die Position der Elemente
       }
     }
   }
@@ -490,7 +498,7 @@ export function aufgabe26(args) {
 
 
 
-
+//ähnlich wie Aufgbe 6
 export function aufgabe27(args) {
   const input = args
   if (input.length === 0) return false
