@@ -23,7 +23,6 @@ export function aufgabe01(args) {
 
 
 
-
 export function aufgabe02(args) {
   const input = args
   const result = []
@@ -36,12 +35,10 @@ export function aufgabe02(args) {
 
     //Hänge den Grossbuchstaben an das Resultat an...
     result.push(capitalizedElement)
-}// Das Ergebnis wird wieder zurückgegeben
-return result.join("")
+  }// Das Ergebnis wird wieder zurückgegeben
+  return result.join("")
 
 }
-
-
 
 
 
@@ -53,18 +50,17 @@ export function aufgabe03(args) {
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
     //Soll nur ein 'e' enthalten
-if (currentElement === 'e'){
-  count = count + 1
-}
+    if (currentElement === 'e'){
+     count = count + 1
+    }
  
-// Soll grosses 'E' zählen
-else if (currentElement === 'E'){
-  count = count + 1
-}
+    // Soll grosses 'E' zählen
+    else if (currentElement === 'E'){
+    count = count + 1
+    }
   }
   return count
 }
-
 
 
 
@@ -89,7 +85,6 @@ else if (currentElement === '.'){
 
 
 
-
 export function aufgabe05(args) {
   const input = args
   const result = []
@@ -110,7 +105,6 @@ export function aufgabe05(args) {
     
 
 
-
 export function aufgabe06(args) {
   const input = args
   const result = []
@@ -125,15 +119,9 @@ export function aufgabe06(args) {
     ) {
       return true
     }
-
   }
-
-
   return result.join("")
 }
-
-
-
 
 
 
@@ -156,13 +144,9 @@ export function aufgabe07(args) {
       if (input[i+2]=== "d") {
         return true
     }
-
+  }
+  return false
 }
-
-return false
-
-}
-
 
 
 
@@ -186,7 +170,6 @@ export function aufgabe08(args) {
 
 
 
-
 export function aufgabe09(args) {
   const input = args
   const result = []
@@ -203,7 +186,6 @@ export function aufgabe09(args) {
     else {return false}
 
   }
-
 
 
 
@@ -254,7 +236,6 @@ export function aufgabe11(args) {
 
 
 
-
 export function aufgabe12(args) {
   const input = args
   const result = [] 
@@ -270,7 +251,6 @@ export function aufgabe12(args) {
   }
   return -1 // fals kein e gefunden ist, gibt es -1 zurück
 }
-
 
 
 
@@ -313,7 +293,6 @@ export function aufgabe14(args) {
 
 
 
-
 export function aufgabe15(args) {
   const input = args
   const result = []
@@ -332,7 +311,6 @@ export function aufgabe15(args) {
 
 
 
-
 export function aufgabe16(args) {
   const input = args
   const result = []
@@ -345,10 +323,9 @@ export function aufgabe16(args) {
       break; //beendet die schelife sofort, wenn es auch ein $ stösst
     }
     result.push(currentElement);
+  }
+  return result.join('') //gibt die die gesammelten Buchstaben zurück
 }
-return result.join('') //gibt die die gesammelten Buchstaben zurück
-}
-
 
 
 
@@ -371,7 +348,6 @@ export function aufgabe17(args) {
 
 
 
-
 export function aufgabe18(args) {
   const input = args
   const result = []
@@ -381,7 +357,6 @@ export function aufgabe18(args) {
   }
   return result.join("")
 }
-
 
 
 
@@ -395,7 +370,6 @@ export function aufgabe19(args) {
   }
   return result.join("")
 }
-
 
 
 
@@ -414,10 +388,9 @@ export function aufgabe20 (args) {
  
     }
   
-}
+  }
   return false
 }
-
 
 
 
@@ -433,7 +406,6 @@ export function aufgabe21(args) {
 
 
 
-
 export function aufgabe22(args) {
   const input = args
   const result = []
@@ -443,7 +415,6 @@ export function aufgabe22(args) {
   }
   return result.join("")
 }
-
 
 
 
@@ -459,7 +430,6 @@ export function aufgabe23(args) {
 
 
 
-
 export function aufgabe24(args) {
   const input = args
   const result = []
@@ -472,7 +442,6 @@ export function aufgabe24(args) {
 
 
 
-
 export function aufgabe25(args) {
   const input = args
   const result = []
@@ -482,7 +451,6 @@ export function aufgabe25(args) {
   }
   return result.join("")
 }
-
 
 
 
@@ -519,7 +487,6 @@ export function aufgabe27(args) {
 
 
 
-
 export function aufgabe28(args) {
   const input = args
   const result = []
@@ -551,6 +518,5 @@ export function bubbleSort(args) {
   console.log(result)
 
   return result
-  
 }
 
